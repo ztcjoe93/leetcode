@@ -7,7 +7,7 @@ import (
 	"golang.org/x/exp/slices"
 )
 
-func main() {
+func test_1() {
 
 	inputs := []interface{}{
 		[]interface{}{[]int{2, 7, 11, 15}, 9},
