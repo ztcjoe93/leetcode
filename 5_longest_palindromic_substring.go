@@ -5,39 +5,18 @@ import "fmt"
 func test_5() {
 
 	inputs := []string{
-		"aaaaa",
-		"aaaa",
-		"ccc",
-		"bcb",
-		"cbb",
-		"cba",
-		"caba",
-		"babad",
-		"cbbd",
-		"cb",
-		"bb",
-		"a",
-		"ccbracecarpopracecarbcc",
-		"ccbracecarpopracebcc",
+		"aaaaa", "aaaa", "ccc", "bcb",
+		"cbb", "cba", "caba", "babad",
+		"cbbd", "cb", "bb", "a",
+		"ccbracecarpopracecarbcc", "ccbracecarpopracebcc",
 		"azwdzwmwcqzgcobeeiphemqbjtxzwkhiqpbrprocbppbxrnsxnwgikiaqutwpftbiinlnpyqstkiqzbggcsdzzjbrkfmhgtnbujzszxsycmvipjtktpebaafycngqasbbhxaeawwmkjcziybxowkaibqnndcjbsoehtamhspnidjylyisiaewmypfyiqtwlmejkpzlieolfdjnxntonnzfgcqlcfpoxcwqctalwrgwhvqvtrpwemxhirpgizjffqgntsmvzldpjfijdncexbwtxnmbnoykxshkqbounzrewkpqjxocvaufnhunsmsazgibxedtopnccriwcfzeomsrrangufkjfzipkmwfbmkarnyyrgdsooosgqlkzvorrrsaveuoxjeajvbdpgxlcrtqomliphnlehgrzgwujogxteyulphhuhwyoyvcxqatfkboahfqhjgujcaapoyqtsdqfwnijlkknuralezqmcryvkankszmzpgqutojoyzsnyfwsyeqqzrlhzbc",
 	}
 
 	outputs := []string{
-		"aaaaa",
-		"aaaa",
-		"ccc",
-		"bcb",
-		"bb",
-		"c",
-		"aba",
-		"bab",
-		"bb",
-		"c",
-		"bb",
-		"a",
-		"ccbracecarpopracecarbcc",
-		"ecarpoprace",
-		"sooos",
+		"aaaaa", "aaaa", "ccc", "bcb",
+		"bb", "c", "aba", "bab",
+		"bb", "c", "bb", "a",
+		"ccbracecarpopracecarbcc", "ecarpoprace", "sooos",
 	}
 
 	passed, failed := 0, 0
