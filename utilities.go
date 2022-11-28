@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func fullEval(results ...bool) {
 	passed := 0
@@ -16,7 +19,7 @@ func fullEval(results ...bool) {
 func eval(inputs interface{}, expected interface{}, outputs interface{}) bool {
 	fmt.Printf("inputs=%v,expected=%v,outputs=%v\n", inputs, expected, outputs)
 
-	if outputs == expected {
+	if reflect.DeepEqual(outputs, expected) {
 		fmt.Printf("TEST CASE PASSED\n\n")
 		return true
 	} else {
