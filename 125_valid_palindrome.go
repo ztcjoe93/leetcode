@@ -1,49 +1,44 @@
 package main
 
-import "fmt"
-
 func isPalindrome(s string) bool {
-	fcur := 0
-	bcur := len(s) - 1
-	found := false
-
-	for fcur < bcur && bcur > fcur {
+	isPalindrome := true
+	frontCur := 0
+	backCur := len(s) - 1
+	for frontCur <= backCur {
 		var frontVal byte
 		var backVal byte
 
-		for !found {
-			if s[fcur] >= 'a' && s[fcur] <= 'z' {
-				frontVal = s[fcur]
-				found = true
-			} else if s[fcur] >= 'A' && s[fcur] <= 'Z' {
-				frontVal = s[fcur] + 32
-				found = true
+		for frontCur < len(s) {
+			if s[frontCur] >= 'A' && s[frontCur] <= 'Z' {
+				frontVal = s[frontCur] + 32
+				break
+			} else if (s[frontCur] >= 'a' && s[frontCur] <= 'z') || (s[frontCur] >= '0' && s[frontCur] <= '9') {
+				frontVal = s[frontCur]
+				break
 			} else {
-				fcur++
+				frontCur++
 			}
 		}
 
-		found = false
-		if s[bcur] >= 'a' && s[bcur] <= 'z' {
-			backVal = s[bcur]
-			found = true
-		} else if s[bcur] >= 'A' && s[bcur] <= 'Z' {
-			backVal = s[bcur] + 32
-			found = true
-		} else {
-			bcur--
+		for backCur >= 0 {
+			if s[backCur] >= 'A' && s[backCur] <= 'Z' {
+				backVal = s[backCur] + 32
+				break
+			} else if (s[backCur] >= 'a' && s[backCur] <= 'z') || (s[backCur] >= '0' && s[backCur] <= '9') {
+				backVal = s[backCur]
+				break
+			} else {
+				backCur--
+			}
 		}
 
-		fmt.Printf("frontcur-%v | backcur-%v\n", fcur, bcur)
-		fmt.Printf("frontcur-%v | backcur-%v\n", s[fcur], s[bcur])
 		if frontVal != backVal {
-			fmt.Printf("%v <-> %v\n", string(frontVal), string(backVal))
 			return false
 		} else {
-			fcur++
-			bcur--
+			frontCur++
+			backCur--
 		}
 	}
 
-	return true
+	return isPalindrome
 }
